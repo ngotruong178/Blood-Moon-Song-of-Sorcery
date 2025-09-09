@@ -3,11 +3,12 @@
   "WorkspaceRootPath": "D:\\GameMake\\Blood Moon\\Blood Moon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{98FB286E-33B4-AC1D-F444-7CA8AA9F3A1D}|Assembly-CSharp.csproj|d:\\gamemake\\blood moon\\blood moon\\assets\\script\\player_movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98FB286E-33B4-AC1D-F444-7CA8AA9F3A1D}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player_movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|d:\\gamemake\\blood moon\\blood moon\\assets\\script\\player_combat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\script\\player_combat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GameMake\\Second Game\\Second Game\\Assets\\Script\\Player_Movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GameMake\\Blood Moon\\Blood Moon\\assets\\script\\player_movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\script\\player_movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,33 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Player_Movement.cs",
-              "DocumentMoniker": "D:\\GameMake\\Second Game\\Second Game\\Assets\\Script\\Player_Movement.cs",
-              "RelativeDocumentMoniker": "..\\..\\Second Game\\Second Game\\Assets\\Script\\Player_Movement.cs",
-              "ToolTip": "D:\\GameMake\\Second Game\\Second Game\\Assets\\Script\\Player_Movement.cs",
-              "RelativeToolTip": "..\\..\\Second Game\\Second Game\\Assets\\Script\\Player_Movement.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAADUAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Player_Combat.cs",
+              "DocumentMoniker": "D:\\GameMake\\Blood Moon\\Blood Moon\\Assets\\Script\\Player_Combat.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Player_Combat.cs",
+              "ToolTip": "D:\\GameMake\\Blood Moon\\Blood Moon\\Assets\\Script\\Player_Combat.cs",
+              "RelativeToolTip": "Assets\\Script\\Player_Combat.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAiwCEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T08:53:27.667Z",
+              "WhenOpened": "2025-09-08T10:11:08.786Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Player_Movement.cs",
               "DocumentMoniker": "D:\\GameMake\\Blood Moon\\Blood Moon\\Assets\\Script\\Player_Movement.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Player_Movement.cs",
               "ToolTip": "D:\\GameMake\\Blood Moon\\Blood Moon\\Assets\\Script\\Player_Movement.cs",
               "RelativeToolTip": "Assets\\Script\\Player_Movement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAQwDMAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T07:45:33.862Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-08T07:45:33.862Z"
             }
           ]
         }

@@ -50,7 +50,7 @@ public class Player_Movement : MonoBehaviour
      }
     public void JumpHandle()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position,0.2f,groundLayer);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position,0.4f,groundLayer);
         if (isGrounded) {
             jumpCount = 0;
         }
@@ -67,8 +67,6 @@ public class Player_Movement : MonoBehaviour
                 jumpCount++;
             }
         }
-        
-        
     }
     public void UpdateAnimation()
     {

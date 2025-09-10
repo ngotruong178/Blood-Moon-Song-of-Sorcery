@@ -308,16 +308,20 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3637612232714953801, guid: 76e61e7af9761264b961b03ef39d52a5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3637612232714953801, guid: 76e61e7af9761264b961b03ef39d52a5, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.0022141
       objectReference: {fileID: 0}
     - target: {fileID: 3637612232714953801, guid: 76e61e7af9761264b961b03ef39d52a5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.75
+      value: -1.7
       objectReference: {fileID: 0}
     - target: {fileID: 3637612232714953801, guid: 76e61e7af9761264b961b03ef39d52a5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.19
+      value: -0.72
       objectReference: {fileID: 0}
     - target: {fileID: 3637612232714953801, guid: 76e61e7af9761264b961b03ef39d52a5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -365,6 +369,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3637612232714953801, guid: 76e61e7af9761264b961b03ef39d52a5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 397323436}
+    - targetCorrespondingSourceObject: {fileID: 3637612232714953801, guid: 76e61e7af9761264b961b03ef39d52a5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 959024107}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3591769209375526064, guid: 76e61e7af9761264b961b03ef39d52a5, type: 3}
       insertIndex: -1
@@ -728,6 +735,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &959024106
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 959024107}
+  m_Layer: 7
+  m_Name: Ulti Pos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &959024107
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959024106}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.49, y: 0.12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2082649649}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1073950309
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,8 +926,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assassin_Skills
   decoyPrefab: {fileID: 4726862686998267810, guid: 30949bb643e1b024bbbe0ef1231026a1, type: 3}
-  swordPrefab: {fileID: 8151008812401301056, guid: 276e52d8a43873743b3529689bb8ab34, type: 3}
+  swordPrefab: {fileID: 3418589226382661459, guid: ac0df65fe818f364c808860a4da3dd36, type: 3}
+  ultPrefab: {fileID: 4484915612792188710, guid: c9d23d0ee85d6944e8a39c3a278efa3d, type: 3}
   attackPos: {fileID: 397323436}
+  ultPos: {fileID: 959024107}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

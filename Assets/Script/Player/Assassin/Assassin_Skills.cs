@@ -6,11 +6,15 @@ public class Assassin_Skills : MonoBehaviour
     //Skill1_Decoy
     [SerializeField] private GameObject decoyPrefab;
     [SerializeField] private GameObject swordPrefab;
+    [SerializeField] private GameObject ultPrefab;
     private GameObject sword;
     private GameObject decoy;
+    private GameObject ult;
     [SerializeField] private Transform attackPos;
+    [SerializeField] private Transform ultPos;
     private bool isSkill1Actived = false;
     private bool isSkill2Actived = false;
+    private bool isSkillUltActived = false;
     private Animator animator;
     private Player_Movement player_Movement;
     private void Awake()
@@ -33,7 +37,13 @@ public class Assassin_Skills : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.O) && !isSkill2Actived)
         {
+            animator.SetTrigger("Skill2");
             StartCoroutine(Skill2());
+        }
+        if (Input.GetKeyDown(KeyCode.I) && !isSkillUltActived)
+        {
+
+            StartCoroutine(SkillUlt());
         }
     }
     private void FixedUpdate()
@@ -63,5 +73,20 @@ public class Assassin_Skills : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
         Destroy(sword);
         isSkill2Actived= false;
+    }
+    public IEnumerator SkillUlt()
+    {
+        isSkillUltActived = true;
+        ult = Instantiate(ultPrefab, ultPos.position, Quaternion.identity);
+        if (transform.localScale.x < 0)
+        {
+            Vector3 scale = ult.transform.localScale;
+            scale.x = -ult.transform.localScale.x;
+            ult.transform.localScale = scale;
+        }
+            
+        yield return new WaitForSeconds(5f);
+        Destroy(ult);
+        isSkillUltActived = false;
     }
 }

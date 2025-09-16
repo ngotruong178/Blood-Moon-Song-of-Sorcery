@@ -7,9 +7,11 @@ public class Assassin_Skills : MonoBehaviour
     [SerializeField] private GameObject decoyPrefab;
     [SerializeField] private GameObject swordPrefab;
     [SerializeField] private GameObject ultPrefab;
+    public LayerMask enemyLayer;
     private GameObject sword;
     private GameObject decoy;
     private GameObject ult;
+    public float dmgSkill2 = 30f;
     [SerializeField] private Transform attackPos;
     [SerializeField] private Transform ultPos;
     private bool isSkill1Actived = false;
@@ -21,7 +23,7 @@ public class Assassin_Skills : MonoBehaviour
     {
         animator=GetComponent<Animator>();
         player_Movement = GetComponent<Player_Movement>();
-  
+        
     }
     void Start()
     {
@@ -69,9 +71,8 @@ public class Assassin_Skills : MonoBehaviour
         isSkill2Actived = true;
         sword = Instantiate(swordPrefab, attackPos.position, Quaternion.identity);
         Rigidbody2D swordrb = sword.GetComponent<Rigidbody2D>();
-        swordrb.linearVelocity = new Vector3( 10f* transform.localScale.x,swordrb.linearVelocity.y);
+        swordrb.linearVelocity = new Vector3(10f * transform.localScale.x, swordrb.linearVelocity.y);
         yield return new WaitForSeconds(2.5f);
-        Destroy(sword);
         isSkill2Actived= false;
     }
     public IEnumerator SkillUlt()
@@ -85,8 +86,9 @@ public class Assassin_Skills : MonoBehaviour
             ult.transform.localScale = scale;
         }
             
-        yield return new WaitForSeconds(5f);
-        Destroy(ult);
+        yield return new WaitForSeconds(0.5f);
+        
         isSkillUltActived = false;
     }
+    
 }

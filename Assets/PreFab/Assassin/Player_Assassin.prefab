@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &712683077190292266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6936272989241966855}
+  m_Layer: 7
+  m_Name: Ulti Pos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6936272989241966855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712683077190292266}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.49, y: 0.12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3637612232714953801}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3560296995568316659
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4670516603647200019}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground Check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +77,8 @@ GameObject:
   - component: {fileID: 12684864327837755}
   - component: {fileID: 4279142946697539129}
   - component: {fileID: 8774506656679291235}
-  m_Layer: 0
+  - component: {fileID: 5967614256195259853}
+  m_Layer: 7
   m_Name: Player_Assassin
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -63,10 +95,12 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.04, y: 0.16, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.0022141, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4670516603647200019}
+  - {fileID: 8286866805465455612}
+  - {fileID: 6936272989241966855}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8359476319307212624
@@ -137,7 +171,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 60dc345399a982f44bf16cab60a576f8, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -219,6 +253,9 @@ MonoBehaviour:
     m_Bits: 64
   groundCheck: {fileID: 4670516603647200019}
   maxJump: 2
+  isGrounded: 0
+  isJumping: 0
+  isFalling: 0
 --- !u!95 &4279142946697539129
 Animator:
   serializedVersion: 7
@@ -253,4 +290,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 670a10b8ad1661349b7d852d3be144a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_Attack
+  dashSpeed: 20
+  dashDuration: 0.28
+  attackPos: {fileID: 8286866805465455612}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  attackRange: 0.81
+  attack1Dame: 20
+  attack2Dame: 30
+  maxHealth: 200
+  dashCoolDown: 0.55
   isAttacking: 0
+--- !u!114 &5967614256195259853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3591769209375526064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc9845e8c8b22947b87fff44852af0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Assassin_Skills
+  decoyPrefab: {fileID: 4726862686998267810, guid: 30949bb643e1b024bbbe0ef1231026a1, type: 3}
+  swordPrefab: {fileID: 3418589226382661459, guid: ac0df65fe818f364c808860a4da3dd36, type: 3}
+  ultPrefab: {fileID: 4484915612792188710, guid: c9d23d0ee85d6944e8a39c3a278efa3d, type: 3}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  dmgSkill2: 30
+  attackPos: {fileID: 8286866805465455612}
+  ultPos: {fileID: 6936272989241966855}
+--- !u!1 &4467830987933781161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8286866805465455612}
+  m_Layer: 7
+  m_Name: Attack Pos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8286866805465455612
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4467830987933781161}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.01, y: 0.13, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3637612232714953801}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

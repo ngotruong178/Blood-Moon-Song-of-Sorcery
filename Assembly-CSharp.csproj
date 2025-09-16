@@ -67,7 +67,9 @@
     <Compile Include="Assets\Asset\Player\Knight\Demo\Sensor_HeroKnight.cs" />
     <Compile Include="Assets\Script\Player\Assassin\Assassin_Skills.cs" />
     <Compile Include="Assets\Script\Player\Player_Movement.cs" />
+    <Compile Include="Assets\Script\Player\Assassin\Skill2_Assassin.cs" />
     <Compile Include="Assets\Asset\Player\Knight\Demo\HeroKnight.cs" />
+    <Compile Include="Assets\Script\Player\Assassin\Skill3_Assassin.cs" />
     <Compile Include="Assets\Script\Player\Player_Combat.cs" />
   </ItemGroup>
   <ItemGroup>

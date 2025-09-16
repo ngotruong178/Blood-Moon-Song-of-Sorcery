@@ -256,37 +256,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &397323435
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 397323436}
-  m_Layer: 7
-  m_Name: Attack Pos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &397323436
+--- !u!4 &397323436 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8286866805465455612, guid: 76e61e7af9761264b961b03ef39d52a5, type: 3}
+  m_PrefabInstance: {fileID: 451068244}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 397323435}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.01, y: 0.13, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2082649649}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &451068244
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -306,10 +280,6 @@ PrefabInstance:
     - target: {fileID: 3591769209375526064, guid: 76e61e7af9761264b961b03ef39d52a5, type: 3}
       propertyPath: m_Layer
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3637612232714953801, guid: 76e61e7af9761264b961b03ef39d52a5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3637612232714953801, guid: 76e61e7af9761264b961b03ef39d52a5, type: 3}
       propertyPath: m_LocalScale.y
@@ -381,17 +351,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 3637612232714953801, guid: 76e61e7af9761264b961b03ef39d52a5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 397323436}
-    - targetCorrespondingSourceObject: {fileID: 3637612232714953801, guid: 76e61e7af9761264b961b03ef39d52a5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 959024107}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3591769209375526064, guid: 76e61e7af9761264b961b03ef39d52a5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2082649650}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76e61e7af9761264b961b03ef39d52a5, type: 3}
 --- !u!1 &519420028
 GameObject:
@@ -627,9 +588,10 @@ GameObject:
   - component: {fileID: 764774274}
   - component: {fileID: 764774273}
   - component: {fileID: 764774272}
+  - component: {fileID: 764774277}
   m_Layer: 9
   m_Name: Skeleton
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -647,12 +609,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   maxHealth: 200
-  attackRange: 0.64
+  attackRange: 0.55
   attackPos: {fileID: 1043989477}
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
   attackDamage: 60
+  attackCooldown: 1.5
+  isRunning: 0
+  isRight: 1
+  moveRange: 2.5
+  moveSpeed: 1.5
+  startPos: {x: 0, y: 0, z: 0}
+  rb: {fileID: 0}
+  currentHealth: 0
 --- !u!61 &764774273
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -691,8 +661,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.3888888, y: 2.0555556}
-    newSize: {x: 1.2777778, y: 1.7777778}
+    oldSize: {x: 1.2777778, y: 1.7777778}
+    newSize: {x: 2.3888888, y: 1.7777778}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -773,7 +743,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.2777778, y: 1.7777778}
+  m_Size: {x: 2.3888888, y: 1.7777778}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -795,6 +765,33 @@ Transform:
   - {fileID: 1043989477}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &764774277
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764774271}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &817712203
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,37 +928,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &959024106
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 959024107}
-  m_Layer: 7
-  m_Name: Ulti Pos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &959024107
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 959024106}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.49, y: 0.12, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2082649649}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1043989476
 GameObject:
@@ -1131,33 +1097,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2082649642 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3591769209375526064, guid: 76e61e7af9761264b961b03ef39d52a5, type: 3}
-  m_PrefabInstance: {fileID: 451068244}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &2082649649 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3637612232714953801, guid: 76e61e7af9761264b961b03ef39d52a5, type: 3}
-  m_PrefabInstance: {fileID: 451068244}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2082649650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2082649642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cc9845e8c8b22947b87fff44852af0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Assassin_Skills
-  decoyPrefab: {fileID: 4726862686998267810, guid: 30949bb643e1b024bbbe0ef1231026a1, type: 3}
-  swordPrefab: {fileID: 3418589226382661459, guid: ac0df65fe818f364c808860a4da3dd36, type: 3}
-  ultPrefab: {fileID: 4484915612792188710, guid: c9d23d0ee85d6944e8a39c3a278efa3d, type: 3}
-  attackPos: {fileID: 397323436}
-  ultPos: {fileID: 959024107}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -10,7 +10,9 @@ public class Player_Combat : MonoBehaviour
     [SerializeField] private float attack1Dame = 20f;
     [SerializeField] private float attack2Dame = 30f;
     [SerializeField] private float maxHealth = 400f;
-    private float currentHealth;
+    public float maxMana = 300f;
+    public float currentMana;
+    public float currentHealth;
     private Player_Movement playerMovement;
     private bool isDashing;
     private float dashTime;
@@ -26,6 +28,7 @@ public class Player_Combat : MonoBehaviour
         animator = GetComponent<Animator>();
         playerMovement = GetComponent<Player_Movement>();
         currentHealth = maxHealth;
+        currentMana = maxMana;
     }
     void Start()
     {
@@ -35,9 +38,11 @@ public class Player_Combat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         Attack();
         Defense();
         StartDash();
+        Mana();
     }
     private void FixedUpdate()
     {
@@ -140,6 +145,18 @@ public class Player_Combat : MonoBehaviour
     void OnDrawGizmosSelected()
     {
           Gizmos.DrawWireSphere(attackPos.position, attackRange);
+    }
+    public void Mana()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            currentMana += 40;
+        }
+        if (currentMana == 0)
+        {
+            Debug.Log("Please charge mana");
+            return;
+        }
     }
     
 

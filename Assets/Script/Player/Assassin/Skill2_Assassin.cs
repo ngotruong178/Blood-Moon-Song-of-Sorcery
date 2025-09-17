@@ -4,6 +4,7 @@ public class Skill2_Assassin : MonoBehaviour
 {
     
     public float damageSkill2 = 30f;
+    
     private void Awake()
     {
         

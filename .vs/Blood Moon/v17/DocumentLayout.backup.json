@@ -3,28 +3,31 @@
   "WorkspaceRootPath": "D:\\GameMake\\Blood Moon\\Blood Moon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GameMake\\Blood Moon\\Blood Moon\\Assets\\Script\\Player\\Assassin\\Skill3_Assassin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\Player\\Assassin\\Skill3_Assassin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98FB286E-33B4-AC1D-F444-7CA8AA9F3A1D}|Assembly-CSharp.csproj|d:\\gamemake\\blood moon\\blood moon\\assets\\script\\player\\assassin\\skill2_assassin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98FB286E-33B4-AC1D-F444-7CA8AA9F3A1D}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\assassin\\skill2_assassin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98FB286E-33B4-AC1D-F444-7CA8AA9F3A1D}|Assembly-CSharp.csproj|d:\\gamemake\\blood moon\\blood moon\\assets\\script\\player\\assassin\\assassin_skills.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98FB286E-33B4-AC1D-F444-7CA8AA9F3A1D}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\assassin\\assassin_skills.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98FB286E-33B4-AC1D-F444-7CA8AA9F3A1D}|Assembly-CSharp.csproj|D:\\GameMake\\Blood Moon\\Blood Moon\\assets\\script\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98FB286E-33B4-AC1D-F444-7CA8AA9F3A1D}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{98FB286E-33B4-AC1D-F444-7CA8AA9F3A1D}|Assembly-CSharp.csproj|D:\\GameMake\\Blood Moon\\Blood Moon\\assets\\script\\player\\player_combat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98FB286E-33B4-AC1D-F444-7CA8AA9F3A1D}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\player_combat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98FB286E-33B4-AC1D-F444-7CA8AA9F3A1D}|Assembly-CSharp.csproj|D:\\GameMake\\Blood Moon\\Blood Moon\\assets\\script\\player\\player_movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98FB286E-33B4-AC1D-F444-7CA8AA9F3A1D}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\player_movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98FB286E-33B4-AC1D-F444-7CA8AA9F3A1D}|Assembly-CSharp.csproj|D:\\GameMake\\Blood Moon\\Blood Moon\\assets\\script\\player\\assassin\\assassin_skills.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98FB286E-33B4-AC1D-F444-7CA8AA9F3A1D}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\assassin\\assassin_skills.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98FB286E-33B4-AC1D-F444-7CA8AA9F3A1D}|Assembly-CSharp.csproj|D:\\GameMake\\Blood Moon\\Blood Moon\\assets\\script\\player\\assassin\\skill2_assassin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98FB286E-33B4-AC1D-F444-7CA8AA9F3A1D}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\assassin\\skill2_assassin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98FB286E-33B4-AC1D-F444-7CA8AA9F3A1D}|Assembly-CSharp.csproj|d:\\gamemake\\blood moon\\blood moon\\assets\\script\\player\\assassin\\skill3_assassin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98FB286E-33B4-AC1D-F444-7CA8AA9F3A1D}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\assassin\\skill3_assassin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98FB286E-33B4-AC1D-F444-7CA8AA9F3A1D}|Assembly-CSharp.csproj|D:\\GameMake\\Blood Moon\\Blood Moon\\assets\\script\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98FB286E-33B4-AC1D-F444-7CA8AA9F3A1D}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GameMake\\First Game\\Assets\\Scripts\\Enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,71 +37,83 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "D:\\GameMake\\First Game\\Assets\\Scripts\\Enemy.cs",
+              "RelativeDocumentMoniker": "..\\..\\First Game\\Assets\\Scripts\\Enemy.cs",
+              "ToolTip": "D:\\GameMake\\First Game\\Assets\\Scripts\\Enemy.cs",
+              "RelativeToolTip": "..\\..\\First Game\\Assets\\Scripts\\Enemy.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T18:25:30.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "D:\\GameMake\\Blood Moon\\Blood Moon\\Assets\\Script\\Enemy\\Enemy.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\Enemy.cs",
+              "ToolTip": "D:\\GameMake\\Blood Moon\\Blood Moon\\Assets\\Script\\Enemy\\Enemy.cs",
+              "RelativeToolTip": "Assets\\Script\\Enemy\\Enemy.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAqwBcAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T18:40:58.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Skill3_Assassin.cs",
               "DocumentMoniker": "D:\\GameMake\\Blood Moon\\Blood Moon\\Assets\\Script\\Player\\Assassin\\Skill3_Assassin.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Player\\Assassin\\Skill3_Assassin.cs",
               "ToolTip": "D:\\GameMake\\Blood Moon\\Blood Moon\\Assets\\Script\\Player\\Assassin\\Skill3_Assassin.cs",
               "RelativeToolTip": "Assets\\Script\\Player\\Assassin\\Skill3_Assassin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T17:27:56.201Z",
+              "WhenOpened": "2025-09-16T18:00:29.978Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Skill2_Assassin.cs",
               "DocumentMoniker": "D:\\GameMake\\Blood Moon\\Blood Moon\\Assets\\Script\\Player\\Assassin\\Skill2_Assassin.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Player\\Assassin\\Skill2_Assassin.cs",
               "ToolTip": "D:\\GameMake\\Blood Moon\\Blood Moon\\Assets\\Script\\Player\\Assassin\\Skill2_Assassin.cs",
               "RelativeToolTip": "Assets\\Script\\Player\\Assassin\\Skill2_Assassin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-16T16:16:00.153Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Enemy.cs",
-              "DocumentMoniker": "D:\\GameMake\\Blood Moon\\Blood Moon\\Assets\\Script\\Enemy\\Enemy.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\Enemy.cs",
-              "ToolTip": "D:\\GameMake\\Blood Moon\\Blood Moon\\Assets\\Script\\Enemy\\Enemy.cs",
-              "RelativeToolTip": "Assets\\Script\\Enemy\\Enemy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T18:40:58.407Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Player_Combat.cs",
               "DocumentMoniker": "D:\\GameMake\\Blood Moon\\Blood Moon\\Assets\\Script\\Player\\Player_Combat.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player_Combat.cs",
               "ToolTip": "D:\\GameMake\\Blood Moon\\Blood Moon\\Assets\\Script\\Player\\Player_Combat.cs",
               "RelativeToolTip": "Assets\\Script\\Player\\Player_Combat.cs",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAqwIMAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAiwHkAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-09T11:48:33.632Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Player_Movement.cs",
               "DocumentMoniker": "D:\\GameMake\\Blood Moon\\Blood Moon\\Assets\\Script\\Player\\Player_Movement.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player_Movement.cs",
               "ToolTip": "D:\\GameMake\\Blood Moon\\Blood Moon\\Assets\\Script\\Player\\Player_Movement.cs",
               "RelativeToolTip": "Assets\\Script\\Player\\Player_Movement.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAAAEEAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAAAEkAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-09T11:48:19.164Z"
+              "WhenOpened": "2025-09-09T11:48:19.164Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -108,7 +123,7 @@
               "RelativeDocumentMoniker": "Assets\\Script\\Player\\Assassin\\Assassin_Skills.cs",
               "ToolTip": "D:\\GameMake\\Blood Moon\\Blood Moon\\Assets\\Script\\Player\\Assassin\\Assassin_Skills.cs",
               "RelativeToolTip": "Assets\\Script\\Player\\Assassin\\Assassin_Skills.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAowDEAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAGsAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-09T10:33:14.302Z",
               "EditorCaption": ""

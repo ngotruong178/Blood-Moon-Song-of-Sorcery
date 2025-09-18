@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class Enemy : MonoBehaviour
     public Rigidbody2D rb;
     private Animator animator;
     public float currentHealth;
+    public Image HPBar;
 
     private void Awake()
     {
@@ -36,7 +38,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         Move();
-        
+        UpdateHPBar();        
     }
     public void Move()
     {
@@ -113,5 +115,9 @@ public class Enemy : MonoBehaviour
         {
             player.GetComponent<Player_Combat>().TakeDamage(attackDamage);
         }
+    }
+    public void UpdateHPBar()
+    {
+        HPBar.fillAmount = currentHealth / maxHealth;
     }
 }

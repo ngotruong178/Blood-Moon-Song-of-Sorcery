@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_Combat : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class Player_Combat : MonoBehaviour
     private Animator animator;
     public bool isAttacking;
     private bool canCombo;
+    public Image HPBar;
+    public Image ManaBar;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -43,6 +46,7 @@ public class Player_Combat : MonoBehaviour
         Defense();
         StartDash();
         Mana();
+        UpDateBar();
     }
     private void FixedUpdate()
     {
@@ -151,12 +155,14 @@ public class Player_Combat : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             currentMana += 40;
+            currentMana = Mathf.Min(currentMana, maxMana);
         }
-        if (currentMana == 0)
-        {
-            Debug.Log("Please charge mana");
-            return;
-        }
+        
+    }
+    public void UpDateBar()
+    {
+        HPBar.fillAmount = currentHealth / maxHealth;
+        ManaBar.fillAmount = currentMana / maxMana;
     }
     
 

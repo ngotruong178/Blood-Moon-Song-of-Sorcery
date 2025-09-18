@@ -6,7 +6,8 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] public float moveSpeed = 5f;
     [SerializeField] private float jumpForce = 10f;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private Transform groundCheck;
+    [SerializeField] private Transform groundCheck1;
+    [SerializeField] private Transform groundCheck2;
     [SerializeField] private int maxJump = 2;
     private Player_Combat playerCombat;
     private Animator animator;
@@ -15,6 +16,7 @@ public class Player_Movement : MonoBehaviour
     private int jumpCount = 0;
     public bool isJumping ;
     public bool isFalling;
+    
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -50,7 +52,7 @@ public class Player_Movement : MonoBehaviour
      }
     public void JumpHandle()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position,0.4f,groundLayer);
+        isGrounded = Physics2D.OverlapCircle(groundCheck1.position,0.4f,groundLayer) || Physics2D.OverlapCircle(groundCheck2.position, 0.4f, groundLayer);
         if (isGrounded) {
             jumpCount = 0;
         }
@@ -76,5 +78,11 @@ public class Player_Movement : MonoBehaviour
         animator.SetBool("IsJumping", isJumping);
         animator.SetBool("IsRunning", isRunning);
         animator.SetBool("IsFalling", isFalling);
+        animator.SetBool("IsGrounded", isGrounded);
+    }
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(groundCheck1.position, 0.4f);
+        Gizmos.DrawWireSphere(groundCheck2.position, 0.4f);
     }
 }

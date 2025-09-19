@@ -9,8 +9,12 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Transform attackPos;
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private float attackDamage = 30f;
+    [SerializeField] private float detectRange = 5f;
+    public Player_Movement player;
     public float attackCooldown =1.5f;
     private float lastAttack;
+    public bool isAttack=  false;
+    public bool isDetected;
     public bool isRunning;
     public bool isRight=true;
     public float moveRange = 2.5f;
@@ -20,13 +24,13 @@ public class Enemy : MonoBehaviour
     private Animator animator;
     public float currentHealth;
     public Image HPBar;
-
     private void Awake()
     {
         isRight = true;
     }
     void Start()
     {
+        player = FindAnyObjectByType<Player_Movement>();
         lastAttack = Time.time;
         startPos = transform.position;
         currentHealth = maxHealth;
@@ -38,16 +42,19 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         Move();
-        UpdateHPBar();        
+        UpdateHPBar();
+        DetectPlayer();
     }
     public void Move()
     {
-        if (Physics2D.OverlapCircle(attackPos.position, attackRange, playerLayer))
+        if (Physics2D.OverlapCircle(attackPos.position, attackRange, playerLayer) )
         {
+            isAttack = true;
             isRunning = false;
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
             if (Time.time >= lastAttack+attackCooldown) 
             {
+                animator.SetBool("IsRunning", false);
                 animator.SetTrigger("Attack");
                 lastAttack = Time.time;
             }
@@ -55,38 +62,42 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            
-            if (isRight)
+            if(!isAttack)
             {
-                transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
-                if (transform.position.x >= startPos.x + moveRange)
+                if (isRight)
                 {
-                    isRight = false;
-                    Flip();
-                }
+                    transform.localScale = new Vector3(1, 1, 1);
+                    transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
+                    if (transform.position.x >= startPos.x + moveRange)
+                    {
+                        isRight = false;
+                        //Flip();
+                    }
 
-            }
-            else
-            {
-                transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
-                if (transform.position.x <= startPos.x - moveRange)
-                {
-                    isRight = true;
-                    Flip();
                 }
+                else
+                {
+                    transform.localScale = new Vector3(-1, 1, 1);
+                    transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+                    if (transform.position.x <= startPos.x - moveRange)
+                    {
+                        isRight = true;
+                        //Flip();
+                    }
+                }
+                isRunning = true;
             }
-            isRunning = true;
             
         }
         
         animator.SetBool("IsRunning", isRunning);
     }
-    public void Flip()
-    {
-        Vector3 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
-    }
+    //public void Flip()
+    //{
+    //    Vector3 scale = transform.localScale;
+    //    scale.x *= -1;
+    //    transform.localScale = scale;
+    //}
     public void TakeDamage(float dame)
     {
         currentHealth -= dame;
@@ -119,5 +130,21 @@ public class Enemy : MonoBehaviour
     public void UpdateHPBar()
     {
         HPBar.fillAmount = currentHealth / maxHealth;
+    }
+    public void DetectPlayer()
+    {
+        float distance = (transform.position - player.transform.position).magnitude;
+        isDetected = distance <= detectRange;
+        if (isAttack && isDetected && !Physics2D.OverlapCircle(attackPos.position, attackRange, playerLayer)) 
+        {
+            animator.SetBool("IsRunning", true);
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed*Time.deltaTime);
+            transform.localScale = new Vector3(transform.position.x < player.transform.position.x ? 1 : -1, 1, 1);
+        }
+        if (!isDetected && isAttack)
+        {
+            isAttack = false;
+            startPos = transform.position;
+        }
     }
 }
